@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!--
+	Document   : TestLayers.xml
+	Created on : October 17, 2013, 11:02 AM
+	Author     : Olmo Zavala Romero
+	Description:
+		This is an example of the XML configuration file
+		used by OWGIS to generate WebGIS sites.
+-->
+
+<MenuConf xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema.xsd">
+	<!-- This are the menus that are available to display entries -->
+	<MenuEntries>
+		<MenuEntry ID="all_mun" EN="Municipalities" ES="Municipios"/>
+		<MenuEntry ID="dang_mun" EN="Dangerous Munic" ES="Municipios peligrosos"/>
+		<MenuEntry ID="railroad" EN="Train tracks" ES="Vias del tren"/>
+		<MenuEntry ID="off_det" EN="Detention offices" ES="Oficinas de detención"/>
+		<MenuEntry ID="cons" EN="Mexican consulates" ES="Consulados mexicanos"/>
+		<MenuEntry ID="border" EN="Border crossing" ES="Cruces fronterizos"/>
+		<MenuEntry ID="states" EN="US States" ES="Estados US"/>
+		<MenuEntry ID="mig" EN="Migrants layers" ES="Para el migrante"/>
+		<MenuEntry ID="back" EN="Backgrounds" ES="Capas de fondo"/>
+		<MenuEntry ID="alb" EN="Shelters" ES="Albergues"/>
+		<MenuEntry ID="com" EN="Dining" ES="Comedores"/>
+
+		<MenuEntry ID="gebco" EN="GEBCO Topography" ES="Topografia GEBCO"/>
+		<MenuEntry ID="nasa" EN="NASA Topography" ES="Topografia GEBCO"/>
+	</MenuEntries>
+
+    <BackgroundLayers BBOX="-180,90,-90,180" server="http://viewer.coaps.fsu.edu/geoserver/wms">
+		<layer name="comm:pyrResult512" featureInfo="none"/> 
+	</BackgroundLayers>
+
+	<!-- Optional layers -->
+    <VectorLayers BBOX="-180,90,-90,180" server="http://owgis.servehttp.com:8080/geoserverdatafest/wms"
+				  vectorLayer="true"> 
+		<layer Menu="all_mun" name="datafest:dangerous_for_migrants"  />
+		<layer Menu="dang_mun" name="datafest:only_dangerous" />
+		<layer Menu="railroad" name="datafest:railway-high-res" selected="true"/>
+		<layer Menu="border" name="datafest:Border_cross" />
+		<layer Menu="cons" name="datafest:Consulados" />
+		<layer Menu="off_det" name="datafest:off_detencion" />
+		<layer Menu="alb" name="datafest:Albergues" />
+		<layer Menu="com" name="datafest:Comedores" />
+	</VectorLayers>
+
+	<MainLayers BBOX="-180,90,-90,180" server="http://owgis.servehttp.com:8080/geoserverdatafest/wms"
+				  vectorLayer="true"> 
+                  <!-- Municipios peligrosos -->
+                  <layer Menu="mig,dang_mun" name="datafest:only_dangerous" 
+                      EN="Dangerous municipalities for migrants in Mexico"
+                      ES="Municipios peligrosos para migrantes en México" />
+                  <!--Comedores-->
+                  <layer Menu="mig,com" name="datafest:Comedores" 
+                      EN="Dining for the migrants"
+                      ES="Comedores para los migrantes" />
+                  <!--Albergues -->
+                  <layer Menu="mig,alb" name="datafest:Albergues" 
+                      EN="Shelters for the migrants"
+                      ES="Albergues para los migrantes" />
+                  <!--Trenes -->
+                  <layer Menu="mig,railroad" name="datafest:railway-high-res"
+                      EN="Rail tracks for the migrant route "
+                      ES="Vias del tren de la ruta del migrante" />
+                  <!--Consulados-->
+                <layer Menu="mig,cons" name="datafest:Consulados" 
+                      EN="Mexican consulates in the U.S."
+                      ES="Consulados mexicanos en Estados Unidos" />
+                  <!--Oficinas detencion-->
+                <layer Menu="mig,off_det" name="datafest:off_detencion" 
+                      EN="Immigration court"
+                      ES="Cortes de inmigración" />
+                  <!--Cruces fronterizos-->
+                  <layer Menu="mig,border" name="datafest:Border_cross"
+                      EN="Border crossing"
+                      ES="Cruces fronterizos" />
+	</MainLayers>
+
+	<MainLayers BBOX="-180,90,-90,180" server="http://viewer.coaps.fsu.edu/geoserver/wms">
+      <!--<layer Menu="all_mun" name="datafest:dangerous_for_migrants" 
+                server="http://owgis.servehttp.com:8080/geoserverdatafest/wms"
+          EN="Mexico Municipalities"
+          ES="Municipios " />-->
+      <layer Menu="back,states" name="datafest:us_states" 
+                server="http://owgis.servehttp.com:8080/geoserverdatafest/wms"
+          EN="U.S. states"
+          ES="Estados de Estados Unidos" />
+        <layer Menu="back,nasa" name="comm:pyrResult512" featureInfo="comm:gebco" 
+                        EN="" ES="" /> 
+        <layer Menu="back,gebco" name="comm:gebco" featureInfo="comm:gebco" 
+                        EN="" ES="" /> 
+    </MainLayers>
+
+</MenuConf>
+
