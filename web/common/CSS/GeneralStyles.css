@@ -183,16 +183,23 @@ div.leftFoot {
   z-index: 1000;
   display: inline;
   color: black;
+  background-image: url("../images/transBack.png");
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   opacity: 0.8;
+  padding: 5px;
 }
 
-/* line 129, ../scss/GeneralStyles.scss */
+/* line 132, ../scss/GeneralStyles.scss */
 a {
   text-decoration: none;
 }
 
-/* line 131, ../scss/GeneralStyles.scss */
+/* line 134, ../scss/GeneralStyles.scss */
 .footNote {
   font-size: 12px;
   display: inline;
@@ -201,13 +208,13 @@ a {
 
 /*It is used for normal text or paragraph (with shadows)
 but the size of the font is larger */
-/* line 139, ../scss/GeneralStyles.scss */
+/* line 142, ../scss/GeneralStyles.scss */
 .bigFontSize {
   font-size: 30px;
 }
 
 /*Style for the 'contact' text. At the bottom of the page*/
-/* line 144, ../scss/GeneralStyles.scss */
+/* line 147, ../scss/GeneralStyles.scss */
 #emailText {
   /*@include text-shadow($haloColor 1px 1px 5px, $haloColor -1px 1px 0, $haloColor 1px -1px 0, $haloColor -1px -1px 0);*/
   text-shadow: #ecf2f8 0 2px 1px, #ecf2f8 2px 0 1px, #ecf2f8 -2px 0 1px, #ecf2f8 0 -2px 1px, #ecf2f8 2px 2px 1px, #ecf2f8 -2px 2px 1px, #ecf2f8 2px -2px 1px, #ecf2f8 -2px -2px 1px;
@@ -215,7 +222,7 @@ but the size of the font is larger */
   color: blue;
 }
 
-/* line 152, ../scss/GeneralStyles.scss */
+/* line 155, ../scss/GeneralStyles.scss */
 #owgislogocont {
   position: absolute;
   display: inline;
@@ -224,7 +231,7 @@ but the size of the font is larger */
   z-index: 1009;
 }
 
-/* line 162, ../scss/GeneralStyles.scss */
+/* line 165, ../scss/GeneralStyles.scss */
 #draggable-container {
   position: absolute;
   width: 96%;

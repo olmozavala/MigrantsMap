@@ -121,8 +121,8 @@ This is the main jsp file that forms the html webpage. It contains the skeleton 
             <div id="pieDePaginaIzq" class="leftFoot">
                 <a  href="http://olmozavala.com">Olmo S. Zavala R., </a><br>
                 Mar&iacute;a Elena Osorio T.,<br>
-                Yazmin J. Valdez T. <fmt:message key="trans.mx.and" /><br>
-                Jorge Luis Barreda E.<br>
+                Yazmin J. Valdez T. <br>
+                Jorge Luis Barreda E. <fmt:message key="trans.mx.and" /><br>
                 Alejandro Osorio T.<br>
                 <a id="emailText" href="mailto:olmozavala@gmail.com"> <fmt:message key="main.contact" /></a>
             </div>          

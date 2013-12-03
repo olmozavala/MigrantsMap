@@ -22,9 +22,10 @@
 		<MenuEntry ID="back" EN="Backgrounds" ES="Capas de fondo"/>
 		<MenuEntry ID="alb" EN="Shelters" ES="Albergues"/>
 		<MenuEntry ID="com" EN="Dining" ES="Comedores"/>
+		<MenuEntry ID="offmig" EN="Migration offices" ES="Oficinas migración"/>
 
 		<MenuEntry ID="gebco" EN="GEBCO Topography" ES="Topografia GEBCO"/>
-		<MenuEntry ID="nasa" EN="NASA Topography" ES="Topografia GEBCO"/>
+		<MenuEntry ID="nasa" EN="NASA Topography" ES="Topografia NASA"/>
 	</MenuEntries>
 
     <BackgroundLayers BBOX="-180,90,-90,180" server="http://viewer.coaps.fsu.edu/geoserver/wms">
@@ -40,8 +41,9 @@
 		<layer Menu="border" name="datafest:Border_cross" />
 		<layer Menu="cons" name="datafest:Consulados" />
 		<layer Menu="off_det" name="datafest:off_detencion" />
-		<layer Menu="alb" name="datafest:Albergues" />
+		<layer Menu="alb" name="datafest:Albergues" selected="true"/>
 		<layer Menu="com" name="datafest:Comedores" />
+		<layer Menu="offmig" name="datafest:offic_migracion" />
 	</VectorLayers>
 
 	<MainLayers BBOX="-180,90,-90,180" server="http://owgis.servehttp.com:8080/geoserverdatafest/wms"
@@ -74,6 +76,10 @@
                   <layer Menu="mig,border" name="datafest:Border_cross"
                       EN="Border crossing"
                       ES="Cruces fronterizos" />
+                  <!--Oficinas migracoin-->
+                  <layer Menu="mig,offmig" name="datafest:offic_migracion"
+                      EN="Migration offices"
+                      ES="Oficinas de migración en México" />
 	</MainLayers>
 
 	<MainLayers BBOX="-180,90,-90,180" server="http://viewer.coaps.fsu.edu/geoserver/wms">
