@@ -33,7 +33,7 @@
 	</BackgroundLayers>
 
 	<!-- Optional layers -->
-    <VectorLayers BBOX="-180,90,-90,180" server="http://owgis.servehttp.com:8080/geoserverdatafest/wms"
+    <OptionalLayers BBOX="-180,90,-90,180" server="http://owgis.servehttp.com:8080/geoserverdatafest/wms"
 				  vectorLayer="true"> 
 		<layer Menu="all_mun" name="datafest:dangerous_for_migrants"  />
 		<layer Menu="dang_mun" name="datafest:only_dangerous" />
@@ -44,7 +44,7 @@
 		<layer Menu="alb" name="datafest:Albergues" selected="true"/>
 		<layer Menu="com" name="datafest:Comedores" />
 		<layer Menu="offmig" name="datafest:offic_migracion" />
-	</VectorLayers>
+	</OptionalLayers>
 
 	<MainLayers BBOX="-180,90,-90,180" server="http://owgis.servehttp.com:8080/geoserverdatafest/wms"
 				  vectorLayer="true"> 
