@@ -18,12 +18,21 @@ This is the main jsp file that forms the html webpage. It contains the skeleton 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="${language}">
     <head>
         <%@include file="Header/GlobalJavaScript.jsp" %> <%-- Sets all the javascript global variables that are initiated by the java application --%>
+<<<<<<< HEAD
 
         <%@include file="Header/Header.jsp" %> <%-- contains all the css links and javascript links --%>
         <%@include file="OpenLayersConfig.jsp" %> <%-- this is a javascript file that initiazlies the OpenLayers map --%>
     </head>
 
     <body id="bodyClass" onresize="refreshWindow();" >
+=======
+        <%@include file="Header/Header.jsp" %> <%-- contains all the css links and javascript links --%>
+		<script type="text/javascript" src="common/JS/compiled/script.js"></script> 
+        <%@include file="Header/InitJSVariables.jsp" %> <%-- Sets all the javascript global variables that are initiated by the java application --%>
+    </head>
+
+    <body id="bodyClass" >
+>>>>>>> 164248b9b2dfb775e5f6f6bc514da0e170462cb1
 
 		<span id="helpInstrContainer" class="draggableWindow" >
 			<%@include file="Options/MapInstructionsLatest.jsp" %>
@@ -116,6 +125,7 @@ This is the main jsp file that forms the html webpage. It contains the skeleton 
             </c:if>
 				
 				<!-- Foot page --> 
+<<<<<<< HEAD
     
             <!-- Foot page --> 
             <div id="pieDePaginaIzq" class="leftFoot">
@@ -126,6 +136,29 @@ This is the main jsp file that forms the html webpage. It contains the skeleton 
                 Alejandro Osorio T.<br>
                 <a id="emailText" href="mailto:olmozavala@gmail.com"> <fmt:message key="main.contact" /></a>
             </div>          
+=======
+				<div id="pieDePaginaIzq" class="leftFoot">
+					&nbsp;
+                    <a  href="#">
+                        <img border="0" src="${basepath}/common/images/Logos/Logo.png" alt="Logo" width="30" height="30" /></a>
+                    &nbsp;
+                    <a  href="#">
+                        <img border="0" src="${basepath}/common/images/Logos/Logo.png" alt="Logo" width="30" height="30" /></a>
+                    &nbsp 
+                    <a  href="#">
+                        <img border="0" src="${basepath}/common/images/Logos/Logo.png" alt="Logo" width="30" height="30" /></a>
+                    &nbsp 
+                    <a  href="#">
+                        <img border="0" src="${basepath}/common/images/Logos/Logo.png" alt="Logo" width="30" height="30" /></a>
+							
+                    <a  href="#">
+						<p class="footNote" align="left">
+							&nbsp 
+							&copy; <script language="javascript">document.write(owgis.utils.getDate("%Y"));</script>.  <fmt:message key="main.copyr" /> &nbsp;
+						</p></a>
+                    <a id="emailText" href="#"> <fmt:message key="main.contact" /></a>
+				</div>
+>>>>>>> 164248b9b2dfb775e5f6f6bc514da0e170462cb1
         </form>
 			
         <!-- minimizable windows file -->
@@ -133,6 +166,20 @@ This is the main jsp file that forms the html webpage. It contains the skeleton 
 			
         <!-- Help texts file -->
         <%@include file="Help/HelpTexts.jsp" %>
+<<<<<<< HEAD
+=======
+
+		<script>
+			function addLayers(){
+				${openLayerConfig}
+			};
+		</script>
+		<script>
+			jQuery(document).ready(function() {
+				owgisMain();
+			});
+		</script> 
+>>>>>>> 164248b9b2dfb775e5f6f6bc514da0e170462cb1
     </body>
 </html>
 

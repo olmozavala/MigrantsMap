@@ -146,12 +146,19 @@ p {
   display: inline;
   text-align: center;
   pointer-events: none;
+<<<<<<< HEAD
   /*@include text-shadow($haloColor 1px 1px 5px, $haloColor -1px 1px 0, $haloColor 1px -1px 0, $haloColor -1px -1px 0);*/
   text-shadow: black 0 2px 1px, black 2px 0 1px, black -2px 0 1px, black 0 -2px 1px, black 2px 2px 1px, black -2px 2px 1px, black 2px -2px 1px, black -2px -2px 1px;
 }
 
 /* Default style for the page */
 /* line 99, ../scss/GeneralStyles.scss */
+=======
+}
+
+/* Default style for the page */
+/* line 98, ../scss/GeneralStyles.scss */
+>>>>>>> 164248b9b2dfb775e5f6f6bc514da0e170462cb1
 html, body {
   font-family: Tahoma, Verdana, Arial, sans-serif;
   margin: 0;
@@ -163,18 +170,27 @@ html, body {
 }
 
 /* Used to avoid selecting text (Chrome)*/
+<<<<<<< HEAD
 /* line 110, ../scss/GeneralStyles.scss */
+=======
+/* line 109, ../scss/GeneralStyles.scss */
+>>>>>>> 164248b9b2dfb775e5f6f6bc514da0e170462cb1
 ::selection {
   background: transparent;
 }
 
 /* Used to avoid selecting text (Firefox)*/
+<<<<<<< HEAD
 /* line 114, ../scss/GeneralStyles.scss */
+=======
+/* line 113, ../scss/GeneralStyles.scss */
+>>>>>>> 164248b9b2dfb775e5f6f6bc514da0e170462cb1
 ::-moz-selection {
   background: transparent;
 }
 
 /* Left fotter */
+<<<<<<< HEAD
 /* line 119, ../scss/GeneralStyles.scss */
 div.leftFoot {
   position: absolute;
@@ -195,11 +211,30 @@ div.leftFoot {
 }
 
 /* line 132, ../scss/GeneralStyles.scss */
+=======
+/* line 118, ../scss/GeneralStyles.scss */
+div.leftFoot {
+  position: absolute;
+  bottom: 1%;
+  right: 1%;
+  z-index: 1000;
+  display: inline;
+  color: black;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+}
+
+/* line 128, ../scss/GeneralStyles.scss */
+>>>>>>> 164248b9b2dfb775e5f6f6bc514da0e170462cb1
 a {
   text-decoration: none;
 }
 
+<<<<<<< HEAD
 /* line 134, ../scss/GeneralStyles.scss */
+=======
+/* line 130, ../scss/GeneralStyles.scss */
+>>>>>>> 164248b9b2dfb775e5f6f6bc514da0e170462cb1
 .footNote {
   font-size: 12px;
   display: inline;
@@ -208,13 +243,21 @@ a {
 
 /*It is used for normal text or paragraph (with shadows)
 but the size of the font is larger */
+<<<<<<< HEAD
 /* line 142, ../scss/GeneralStyles.scss */
+=======
+/* line 138, ../scss/GeneralStyles.scss */
+>>>>>>> 164248b9b2dfb775e5f6f6bc514da0e170462cb1
 .bigFontSize {
   font-size: 30px;
 }
 
 /*Style for the 'contact' text. At the bottom of the page*/
+<<<<<<< HEAD
 /* line 147, ../scss/GeneralStyles.scss */
+=======
+/* line 143, ../scss/GeneralStyles.scss */
+>>>>>>> 164248b9b2dfb775e5f6f6bc514da0e170462cb1
 #emailText {
   /*@include text-shadow($haloColor 1px 1px 5px, $haloColor -1px 1px 0, $haloColor 1px -1px 0, $haloColor -1px -1px 0);*/
   text-shadow: #ecf2f8 0 2px 1px, #ecf2f8 2px 0 1px, #ecf2f8 -2px 0 1px, #ecf2f8 0 -2px 1px, #ecf2f8 2px 2px 1px, #ecf2f8 -2px 2px 1px, #ecf2f8 2px -2px 1px, #ecf2f8 -2px -2px 1px;
@@ -222,7 +265,11 @@ but the size of the font is larger */
   color: blue;
 }
 
+<<<<<<< HEAD
 /* line 155, ../scss/GeneralStyles.scss */
+=======
+/* line 151, ../scss/GeneralStyles.scss */
+>>>>>>> 164248b9b2dfb775e5f6f6bc514da0e170462cb1
 #owgislogocont {
   position: absolute;
   display: inline;
@@ -231,7 +278,11 @@ but the size of the font is larger */
   z-index: 1009;
 }
 
+<<<<<<< HEAD
 /* line 165, ../scss/GeneralStyles.scss */
+=======
+/* line 161, ../scss/GeneralStyles.scss */
+>>>>>>> 164248b9b2dfb775e5f6f6bc514da0e170462cb1
 #draggable-container {
   position: absolute;
   width: 96%;

@@ -1,2 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <Context antiJARLocking="true" path="/BeatTheBeast"/>
+=======
+<Context antiJARLocking="true" path="/OWGISTemplate"/>
+>>>>>>> 164248b9b2dfb775e5f6f6bc514da0e170462cb1

@@ -1,3 +1,19 @@
+/*
+* Copyright (c) 2013 Olmo Zavala
+* Permission is hereby granted, free of charge, to any person obtaining a copy of 
+* this software and associated documentation files (the "Software"), to deal in the 
+* Software without restriction, including without limitation the rights to use, copy, 
+* modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and 
+* to permit persons to whom the Software is furnished to do so, subject to the following conditions: 
+* The above copyright notice and this permission notice shall be included in all copies or substantial 
+* portions of the Software.
+*
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, 
+* INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR 
+* PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE 
+* FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, 
+* ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. 
+*/
 package com.mapviewer.business;
 
 import com.mapviewer.conf.OpenLayerMapConfig;
@@ -213,22 +229,27 @@ public class UserRequestManager {
 				System.out.println("ERROR building KML link:" + ex.getMessage());
 			}
 		} else {
+			// Geoserver has the option of a reduced link, in this case
+			// most of the properties get filled by default. 
+			kmlLink = server + "?layers=" + layerName;
+			kmlLink += "&REQUEST=GetMap"
+					+ "&VERSION=1.1.1"
+					+ "&BBOX=" + layer.getBbox().toString()
+					+ "&WIDTH=" + layer.getWidth()
+					+ "&HEIGHT=" + layer.getHeight()
+					+ "&SRS=" + layer.getProjection();
+
 			//We need to change the application format depending on if the
 			// layer is raster or vector (only necessary in last version)
 			if (layer.isVectorLayer()) {
-
-                // Geoserver has the option of a reduced link, in this case
-                // most of the properties get filled by default. 
-                kmlLink = server + "/kml?layers=" + layerName;
-
-                if (!layer.getCql().equals("")) {
-                    kmlLink += "&CQL_FILTER=" + layer.getCql();
-                }
+				kmlLink += "&FORMAT=application/vnd.google-earth.kml+xml";
 			} else {
-                kmlLink = server + "/kml?layers=" + layerName;
-				//kmlLink += "&FORMAT=application/vnd.google-earth.kmz+xml";
+				kmlLink += "&FORMAT=application/vnd.google-earth.kmz+xml";
 			}
 
+			if (!layer.getCql().equals("")) {
+				kmlLink += "&CQL_FILTER=" + layer.getCql();
+			}
 		}
 		return kmlLink;
 	}

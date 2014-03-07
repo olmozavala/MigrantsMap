@@ -10,7 +10,11 @@
 	var paletteUrl = '${paletteUrl}'; //palette server url
 	var basepath = '${basepath}'; //url base path ex:/DeepCProject
 	var lay_style = '${style}'; //layer color style, part of the url to request the pallete.
+<<<<<<< HEAD
 	var map; //map variable that contains the OpenLayers map
+=======
+	var map = 'empty map'; //map variable that contains the OpenLayers map
+>>>>>>> 164248b9b2dfb775e5f6f6bc514da0e170462cb1
 	var ol3view;//View that contains the map
 
     // This variables are used by JavaScript to control de interface. 
@@ -50,5 +54,8 @@
 	var resolutionHigh = "<fmt:message key='ncwms.resolutionHigh'/>";
 	var resolutionMiddle = "<fmt:message key='ncwms.resolutionMiddle'/>";
 	var resolutionLow = "<fmt:message key='ncwms.resolutionLow'/>";
+<<<<<<< HEAD
 	
+=======
+>>>>>>> 164248b9b2dfb775e5f6f6bc514da0e170462cb1
 </script>

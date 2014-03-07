@@ -14,15 +14,24 @@
 */
 /* line 13, ../scss/OptionalLayersMenu.scss */
 #optionalMenuParent {
+<<<<<<< HEAD
   width: 250px;
+=======
+  width: 200px;
+>>>>>>> 164248b9b2dfb775e5f6f6bc514da0e170462cb1
   top: 70px;
   left: 73%;
 }
 
 /* line 16, ../scss/OptionalLayersMenu.scss */
 #optionalLayersParentHover {
+<<<<<<< HEAD
   width: 250px;
   left: -280px;
+=======
+  width: 200px;
+  left: -230px;
+>>>>>>> 164248b9b2dfb775e5f6f6bc514da0e170462cb1
 }
 
 /*Root list of optional layers*/

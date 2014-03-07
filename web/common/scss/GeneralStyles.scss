@@ -90,7 +90,10 @@ p{ color: $fontColor; }
     display:inline;
     text-align:center;
     pointer-events: none;
+<<<<<<< HEAD
     @include textHalo(black);
+=======
+>>>>>>> 164248b9b2dfb775e5f6f6bc514da0e170462cb1
 }
 
 
@@ -118,6 +121,7 @@ html,body {
 /* Left fotter */
 div.leftFoot{
     position:absolute;
+<<<<<<< HEAD
     bottom:0px;
     left:1%;
     z-index:1000;
@@ -127,6 +131,14 @@ div.leftFoot{
 	@include border-radius();
     @include opacity($defOpacity - .1);
     padding: 5px;
+=======
+    bottom:1%;
+    right:1%;
+    z-index:1000;
+    display:inline;
+    color:black;
+    @include opacity($defOpacity - .1);
+>>>>>>> 164248b9b2dfb775e5f6f6bc514da0e170462cb1
 }
 
 a{ text-decoration: none; }

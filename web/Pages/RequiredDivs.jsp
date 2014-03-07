@@ -7,7 +7,11 @@
 <div class="mapTitle" id="layerTitle"> 
     <div class="row">
         <div class="col-sm-8 col-sm-offset-2 ">
+<<<<<<< HEAD
             <p id="pTitleText"> <span style="font-size:28px"><fmt:message key="main.title" /></span> <br> ${layerTitle} </p> 
+=======
+            <p id="pTitleText"> ${layerTitle} </p> 
+>>>>>>> 164248b9b2dfb775e5f6f6bc514da0e170462cb1
         </div>
     </div>
 </div>

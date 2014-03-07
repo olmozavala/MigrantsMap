@@ -41,6 +41,7 @@
         <link href="${basepath}/common/CSS/calendar/steel/steel.css" rel="stylesheet" type="text/css"/>
 
 		<!--Specific for OpenLayers3 -->
+<<<<<<< HEAD
 		<link rel="stylesheet" href="http://ol3js.org/en/master/build/ol.css"/>
 		<script src="http://ol3js.org/en/master/build/ol.js"></script>
 		<link href="${basepath}/common/CSS/Ol3.css" rel="stylesheet" type="text/css"/>
@@ -67,4 +68,30 @@
         <script type="text/javascript" src="${basepath}/common/JS/calendar/jscal2.js"></script>
         <script type="text/javascript" src="${basepath}/common/JS/calendar/lang/en.js"></script>
 
+=======
+		<!--<link rel="stylesheet" href="http://ol3js.org/en/master/css/ol.css" />-->
+		<link rel="stylesheet" href="./common/CSS/ol.css" />
+		<link href="${basepath}/common/CSS/Ol3.css" rel="stylesheet" type="text/css"/>
+		<!--Specific for OpenLayers3 -->
+
+        <script type="text/javascript" src="${basepath}/common/JS/calendar/jscal2.js"></script>
+        <script type="text/javascript" src="${basepath}/common/JS/calendar/lang/en.js"></script>
+
+		<script type="text/javascript" src="${basepath}/common/JS/src/mapDisplay/InterfaceDependent.js"> </script>
+        <script type="text/javascript" src="${basepath}/common/JS/src/mapDisplay/HelpInstructions.js"> </script>
+          
+		<script type="text/javascript" src="${basepath}/common/JS/src/mapDisplay/Calendars.js"> </script>
+		<script type="text/javascript" src="${basepath}/common/JS/src/mapDisplay/Elevation.js"> </script>
+		<script type="text/javascript" src="${basepath}/common/JS/src/mapDisplay/OpenLayersRelated.js"> </script>
+		<script type="text/javascript" src="${basepath}/common/JS/src/mapDisplay/MenuPositions.js"> </script>
+        <script type="text/javascript" src="${basepath}/common/JS/src/mapDisplay/animation.js"> </script>
+        <script type="text/javascript" src="${basepath}/common/JS/src/utilities/validation.js"> </script>
+        <script type="text/javascript" src="${basepath}/common/JS/src/ajax/ajax.js"> </script>
+		<script type="text/javascript" src="${basepath}/common/JS/src/mapDisplay/Palettes.js"> </script>
+		<script type="text/javascript" src="${basepath}/common/JS/src/mapDisplay/CQL.js"> </script>
+		<script type="text/javascript" src="${basepath}/common/JS/src/mapDisplay/OptionalLayersMenu.js"> </script>
+		<script type="text/javascript" src="${basepath}/common/JS/src/mapDisplay/VisualizationTools.js"> </script>
+		<script type="text/javascript" src="${basepath}/common/JS/src/mapDisplay/ExportPng.js"> </script>
+
+>>>>>>> 164248b9b2dfb775e5f6f6bc514da0e170462cb1
         <title><fmt:message key="header.title" /></title>
