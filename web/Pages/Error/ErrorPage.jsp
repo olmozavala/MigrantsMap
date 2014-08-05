@@ -13,11 +13,7 @@
         <meta name="Description" content="Deep-C Error" />
         <meta name="Keywords" content="DeepC, GIS, COAPS, map viewer, Deep-C, Oceanography" />
 
-<<<<<<< HEAD
-        <link href="common/CSS/ErrorPage.css" rel="stylesheet" type="text/css"/>
-=======
 		<link href="./common/CSS/ErrorPage.css" rel="stylesheet" type="text/css"/>
->>>>>>> 164248b9b2dfb775e5f6f6bc514da0e170462cb1
 
         <title>Ups, something went wrong!</title>
     </head>

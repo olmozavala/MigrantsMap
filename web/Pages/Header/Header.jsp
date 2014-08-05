@@ -8,18 +8,29 @@
     This page contains all the links to the CSS, and the javascript 
 --%>
 		<link rel="icon" href="${basepath}/common/images/icon/PageIcon.ico" type="image/x-icon" />
-        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <meta charset="utf-8"  />
         <meta name="Description" content="OWGIS Template" />
         <meta name="Keywords" content="OWGIS " />
 
         <!-- Jquery -->
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-		<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-        <!-- End Jquery -->
+		<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
+		<!--<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>-->
+		<link href="${basepath}/common/CSS/vendor/jquery-ui.min.css" rel="stylesheet" type="text/css"/>
+		<script src="${basepath}/common/JS/vendor/jquery.min.js"></script>
+		<script src="${basepath}/common/JS/vendor/jquery-ui.min.js"></script>
+		
+		<!--Specific for Images in Dropdown for locale-->		
+		<script src="${basepath}/common/JS/vendor/jquery.dd.min.js"></script>
 
+        <!-- End Jquery -->
+        <script>
+		$.widget.bridge('uitooltip', $.ui.tooltip);
+		</script>
         <!-- Bootstrap -->
-		<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-		<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+		<!--<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>-->
+		<!--<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>-->
+		<link href="${basepath}/common/CSS/vendor/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+		<script src="${basepath}/common/JS/vendor/bootstrap.min.js"></script>
         <!-- End Bootstrap -->
 
 		<link href="${basepath}/common/CSS/Calendars.css" rel="stylesheet" type="text/css"/>
@@ -34,64 +45,65 @@
 		<link href="${basepath}/common/CSS/OptionalLayersMenu.css" rel="stylesheet" type="text/css"/>
 		<link href="${basepath}/common/CSS/MenuOptions.css" rel="stylesheet" type="text/css"/>
 		<link href="${basepath}/common/CSS/MinimizedWindows.css" rel="stylesheet" type="text/css"/>
-              
-        <link href="${basepath}/common/CSS/calendar/jscal2.css" rel="stylesheet" type="text/css"/>
-        <link href="${basepath}/common/CSS/calendar/border-radius.css" rel="stylesheet" type="text/css"/>
-        <link href="${basepath}/common/CSS/calendar/reduce-spacing.css" rel="stylesheet" type="text/css"/>
-        <link href="${basepath}/common/CSS/calendar/steel/steel.css" rel="stylesheet" type="text/css"/>
+		<link href="${basepath}/common/CSS/Animations.css" rel="stylesheet" type="text/css"/>
+		<link href="${basepath}/common/CSS/Locale.css" rel="stylesheet" type="text/css"/>
+
+		<!--Specific for Images in Dropdown for locale-->
+		<link href="${basepath}/common/CSS/vendor/dd.css" rel="stylesheet" type="text/css"/>
+
 
 		<!--Specific for OpenLayers3 -->
-<<<<<<< HEAD
-		<link rel="stylesheet" href="http://ol3js.org/en/master/build/ol.css"/>
-		<script src="http://ol3js.org/en/master/build/ol.js"></script>
-		<link href="${basepath}/common/CSS/Ol3.css" rel="stylesheet" type="text/css"/>
-		<!--Specific for OpenLayers3 -->
-
-        <script type="text/javascript" src="${basepath}/common/JS/utilities.js"> </script>
-		<script type="text/javascript" src="${basepath}/common/JS/mapDisplay/InterfaceDependent.js"> </script>
-        <script type="text/javascript" src="${basepath}/common/JS/mapDisplay/HelpInstructions.js"> </script>
-        <script type="text/javascript" src="${basepath}/common/JS/mapDisplay/mapDisplay.js"> </script>
-          
-		<script type="text/javascript" src="${basepath}/common/JS/mapDisplay/Calendars.js"> </script>
-		<script type="text/javascript" src="${basepath}/common/JS/mapDisplay/Elevation.js"> </script>
-		<script type="text/javascript" src="${basepath}/common/JS/mapDisplay/OpenLayersRelated.js"> </script>
-		<script type="text/javascript" src="${basepath}/common/JS/mapDisplay/MenuPositions.js"> </script>
-        <script type="text/javascript" src="${basepath}/common/JS/mapDisplay/animation.js"> </script>
-        <script type="text/javascript" src="${basepath}/common/JS/validation.js"> </script>
-        <script type="text/javascript" src="${basepath}/common/JS/ajax/ajax.js"> </script>
-		<script type="text/javascript" src="${basepath}/common/JS/mapDisplay/Palettes.js"> </script>
-		<script type="text/javascript" src="${basepath}/common/JS/mapDisplay/CQL.js"> </script>
-		<script type="text/javascript" src="${basepath}/common/JS/mapDisplay/OptionalLayersMenu.js"> </script>
-		<script type="text/javascript" src="${basepath}/common/JS/mapDisplay/VisualizationTools.js"> </script>
-		<script type="text/javascript" src="${basepath}/common/JS/mapDisplay/ExportPng.js"> </script>
-
-        <script type="text/javascript" src="${basepath}/common/JS/calendar/jscal2.js"></script>
-        <script type="text/javascript" src="${basepath}/common/JS/calendar/lang/en.js"></script>
-
-=======
 		<!--<link rel="stylesheet" href="http://ol3js.org/en/master/css/ol.css" />-->
 		<link rel="stylesheet" href="./common/CSS/ol.css" />
 		<link href="${basepath}/common/CSS/Ol3.css" rel="stylesheet" type="text/css"/>
 		<!--Specific for OpenLayers3 -->
 
-        <script type="text/javascript" src="${basepath}/common/JS/calendar/jscal2.js"></script>
-        <script type="text/javascript" src="${basepath}/common/JS/calendar/lang/en.js"></script>
-
 		<script type="text/javascript" src="${basepath}/common/JS/src/mapDisplay/InterfaceDependent.js"> </script>
-        <script type="text/javascript" src="${basepath}/common/JS/src/mapDisplay/HelpInstructions.js"> </script>
-          
-		<script type="text/javascript" src="${basepath}/common/JS/src/mapDisplay/Calendars.js"> </script>
-		<script type="text/javascript" src="${basepath}/common/JS/src/mapDisplay/Elevation.js"> </script>
-		<script type="text/javascript" src="${basepath}/common/JS/src/mapDisplay/OpenLayersRelated.js"> </script>
-		<script type="text/javascript" src="${basepath}/common/JS/src/mapDisplay/MenuPositions.js"> </script>
-        <script type="text/javascript" src="${basepath}/common/JS/src/mapDisplay/animation.js"> </script>
-        <script type="text/javascript" src="${basepath}/common/JS/src/utilities/validation.js"> </script>
-        <script type="text/javascript" src="${basepath}/common/JS/src/ajax/ajax.js"> </script>
-		<script type="text/javascript" src="${basepath}/common/JS/src/mapDisplay/Palettes.js"> </script>
-		<script type="text/javascript" src="${basepath}/common/JS/src/mapDisplay/CQL.js"> </script>
-		<script type="text/javascript" src="${basepath}/common/JS/src/mapDisplay/OptionalLayersMenu.js"> </script>
-		<script type="text/javascript" src="${basepath}/common/JS/src/mapDisplay/VisualizationTools.js"> </script>
-		<script type="text/javascript" src="${basepath}/common/JS/src/mapDisplay/ExportPng.js"> </script>
 
->>>>>>> 164248b9b2dfb775e5f6f6bc514da0e170462cb1
+		<!--OpenLayers 3 Management -->
+		<script type="text/javascript" src="${basepath}/common/JS/src/ol3/OpenLayersRelated.js"> </script>
+		<!--OpenLayers 3 Management -->
+
+		<!--NcWMS related-->
+		<script type="text/javascript" src="${basepath}/common/JS/src/ncwms/animations/Calendars.js"> </script>
+		<script type="text/javascript" src="${basepath}/common/JS/src/ncwms/Elevation.js"> </script>
+		<!--NcWMS related-->
+
+		<!--Menus related-->
+		<script src="${basepath}/common/JS/src/menus/MenuPositions.js"> </script>
+		<script src="${basepath}/common/JS/src/menus/OptionalLayersMenu.js"> </script>
+        <script src="${basepath}/common/JS/src/menus/HelpInstructions.js"> </script>
+		<!--Menus related-->
+		
+        <script src="${basepath}/common/JS/src/utilities/validation.js"> </script>
+		<script src="${basepath}/common/JS/src/mapDisplay/CQL.js"> </script>
+		<script src="${basepath}/common/JS/src/mapDisplay/VisualizationTools.js"> </script>
+		<script src="${basepath}/common/JS/src/mapDisplay/ExportPng.js"> </script>
+
+		<!--Debug mode-->
+		<script src="http://resources.programmingclosure.com/closure-lite.js"></script>
+		<!--<script src="${basepath}/common/JS/vendor/closure/goog/base.js"> </script>-->
+		<script src="${basepath}/common/JS/vendor/ol.js"></script>
+		<script src="${basepath}/common/JS/src/ncwms/Transect.js"> </script>
+		<script src="${basepath}/common/JS/src/utilities/utilities.js"> </script>
+		<script src="${basepath}/common/JS/src/ncwms/animations/Animations.js"> </script>
+		<script src="${basepath}/common/JS/src/ol3/mainLayers.js"> </script>
+		<script src="${basepath}/common/JS/src/ol3/MainOl3.js"> </script>
+		<script src="${basepath}/common/JS/src/main/mapDisplay.js"> </script>
+		<script src="${basepath}/common/JS/src/helpTexts/helpTexts.js"> </script>
+		<script src="${basepath}/common/JS/src/ncwms/Palettes.js"> </script>
+		<script src="${basepath}/common/JS/src/ogcstandards/ogcstandards.js"> </script>
+        <script src="${basepath}/common/JS/src/ajax/ajax.js"> </script>
+		<script src="${basepath}/common/JS/src/dynamicVector/VectorStyles.js"> </script>
+		<script src="${basepath}/common/JS/src/dynamicVector/DynamicVectorLayers.js"> </script>
+		<!--Debug mode-->
+
+<!-- Testing putpose .. to be removed later -->
+<%-- 		<script src="${basepath}/common/JS/script.js"></script> --%>
+<!-- Testing putpose .. to be removed later -->
+		
+
+		<!-- Production mode -->
+		<!--<script type="text/javascript" src="common/JS/compiled/script.js"></script>--> 
+		<!-- Production mode -->
         <title><fmt:message key="header.title" /></title>

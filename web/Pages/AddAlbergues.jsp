@@ -19,7 +19,7 @@
 		<link href="common/CSS/NewShelter.css" rel="stylesheet" type="text/css"/>
 			
 		<!--Specific for OpenLayers3 -->
-		<link rel="stylesheet" href="http://ol3js.org/en/master/build/ol.css"/>
+		<link rel="stylesheet" href="./common/CSS/ol.css" />
 		<script src="http://ol3js.org/en/master/build/ol.js"></script>
 		<!--Specific for OpenLayers3 -->
 		
@@ -62,7 +62,7 @@
 				
 				map.on('singleclick', function (evt) {
 
-					var coordinate = evt.getCoordinate();	
+					var coordinate = evt.coordinate;
 					var degcoord = ol.proj.transform(coordinate, _map_projection,'EPSG:4326');
 					$("#shelterloc").val(degcoord);
 
@@ -80,7 +80,7 @@
 					map.removeLayer(vector);
 					vector = new ol.layer.Vector({
 										source: new ol.source.Vector({
-											parser: new ol.parser.GeoJSON(),
+											parser: new ol.source.GeoJSON(),
 											data: data
 										}),
 										style: style

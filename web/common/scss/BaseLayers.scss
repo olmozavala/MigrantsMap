@@ -8,22 +8,18 @@ This file defines the styles for the Base layers
 
 @import "base";
 
-<<<<<<< HEAD
-$containerSize: 200px;
-=======
 $containerSize: 180px;
->>>>>>> 164248b9b2dfb775e5f6f6bc514da0e170462cb1
 $border-select: 6px;
 
 /* Extra styling for the mainlayer dropdowns */
 .mainMenu {
-    font-size: $defFontSize + 2;
+    font-size: $f_larger;
     width: $containerSize - 15;
-    color: $invColor;
-	background-color: $butBackColor + 60;
+    color: $dropDownColor;
+	background-color: $dropDownBackColor;
 	@include border-radius($border-select, $border-select);
 	&:hover{
-		background-color: $butBackColorHover+ 60;
+		background-color: $dropDownHover;
 	}
     //padding: 2px 11px;
     margin: 1px 0px;

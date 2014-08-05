@@ -45,7 +45,7 @@ public class AddShelterServlet extends HttpServlet {
 			Connection con = null;
 			Statement st = null;
 			ResultSet rs = null;
-			String url = "jdbc:postgresql://192.168.1.16/DataFest";
+			String url = "jdbc:postgresql://192.168.1.23/DataFest";
 			String user = "postgres";
 			String password = "o1q4ellv";
 			try {

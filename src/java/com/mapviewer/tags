@@ -12,7 +12,7 @@ AccessControls	business/AccessControls.java	/^public class AccessControls {$/;"	
 BoundaryBox	model/BoundaryBox.java	/^    public BoundaryBox(String bboxstr) {$/;"	m	class:BoundaryBox
 BoundaryBox	model/BoundaryBox.java	/^    public BoundaryBox(double minLong, double maxLong, double minLat, double maxLat) {$/;"	m	class:BoundaryBox
 BoundaryBox	model/BoundaryBox.java	/^public class BoundaryBox {$/;"	c
-CSS_PATH	model/Globals.java	/^    public static String CSS_PATH="\/common\/CSS\/";$/;"	f	class:Globals
+CSS_PATH	model/Globals.java	/^    public static String CSS_PATH="\common\/CSS\/";$/;"	f	class:Globals
 ConvertionTools	tools/ConvertionTools.java	/^public class ConvertionTools {$/;"	c
 END_JAVA_SCRIPT	tools/HtmlTools.java	/^	public static String END_JAVA_SCRIPT = "<\/script>";\/\/end javascript$/;"	f	class:HtmlTools
 ERROR_PAGE	model/PagesNames.java	/^	public static String ERROR_PAGE = Globals.PAGES_PATH + "Error\/ErrorPage.jsp";\/\/Error page of the atlas$/;"	f	class:PagesNames
@@ -23,9 +23,9 @@ Globals	model/Globals.java	/^public class Globals {$/;"	c
 HtmlMenuBuilder	tools/HtmlMenuBuilder.java	/^public class HtmlMenuBuilder {$/;"	c
 HtmlTools	tools/HtmlTools.java	/^	public HtmlTools() {$/;"	m	class:HtmlTools
 HtmlTools	tools/HtmlTools.java	/^public class HtmlTools {$/;"	c
-IMG_PATH	model/Globals.java	/^    public static String IMG_PATH="\/common\/images\/";$/;"	f	class:Globals
+IMG_PATH	model/Globals.java	/^    public static String IMG_PATH="\common\/images\/";$/;"	f	class:Globals
 INIT_JAVA_SCRIPT	tools/HtmlTools.java	/^	public static String INIT_JAVA_SCRIPT = "<script type='text\/javascript'>";\/\/static string for javascript$/;"	f	class:HtmlTools
-JS_PATH	model/Globals.java	/^    public static String JS_PATH = "\/common\/JS\/";$/;"	f	class:Globals
+JS_PATH	model/Globals.java	/^    public static String JS_PATH = "\common\/JS\/";$/;"	f	class:Globals
 Layer	model/Layer.java	/^	public Layer(BoundaryBox bbox,$/;"	m	class:Layer
 Layer	model/Layer.java	/^public class Layer {$/;"	c
 LayerMenuManagerSingleton	business/LayerMenuManagerSingleton.java	/^public class LayerMenuManagerSingleton {$/;"	c
@@ -59,6 +59,9 @@ StringAndNumbers	tools/StringAndNumbers.java	/^public class StringAndNumbers {$/
 TreeMenuUtils	model/menu/TreeMenuUtils.java	/^public class TreeMenuUtils {$/;"	c
 TreeNode	model/menu/TreeNode.java	/^	public TreeNode(boolean root, MenuEntry node, ArrayList<TreeNode> childs, boolean isSelected) {$/;"	m	class:TreeNode
 TreeNode	model/menu/TreeNode.java	/^public class TreeNode {$/;"	c
+UserConfig	conf/UserConfig.java	/^    public UserConfig(OpenLayerMapConfig opConfig) {$/;"	m	class:UserConfig
+UserConfig	conf/UserConfig.java	/^    public UserConfig(String center, String zoom, String palette) {$/;"	m	class:UserConfig
+UserConfig	conf/UserConfig.java	/^public class UserConfig {$/;"	c
 UserRequestManager	business/UserRequestManager.java	/^public class UserRequestManager {$/;"	c
 VECTOR_LAYERS	tools/HtmlTools.java	/^	public static boolean VECTOR_LAYERS = false;$/;"	f	class:HtmlTools
 WCSServlet	business/servlets/WCSServlet.java	/^public class WCSServlet extends HttpServlet {$/;"	c
@@ -92,6 +95,7 @@ com.mapviewer.business.servlets	business/servlets/RedirectServersServlet.java	/^
 com.mapviewer.business.servlets	business/servlets/SimpleAjaxRedirectServlet.java	/^package com.mapviewer.business.servlets;$/;"	p
 com.mapviewer.business.servlets	business/servlets/WCSServlet.java	/^package com.mapviewer.business.servlets;$/;"	p
 com.mapviewer.conf	conf/OpenLayerMapConfig.java	/^package com.mapviewer.conf;$/;"	p
+com.mapviewer.conf	conf/UserConfig.java	/^package com.mapviewer.conf;$/;"	p
 com.mapviewer.exceptions	exceptions/MapViewerException.java	/^package com.mapviewer.exceptions;$/;"	p
 com.mapviewer.exceptions	exceptions/XMLFilesException.java	/^package com.mapviewer.exceptions;$/;"	p
 com.mapviewer.model	model/Access.java	/^package com.mapviewer.model;$/;"	p
@@ -114,7 +118,7 @@ convertObjectArrayToStringArray	tools/ConvertionTools.java	/^	public static Stri
 copyCurrentTree	model/menu/TreeMenuUtils.java	/^	public static TreeNode copyCurrentTree(TreeNode currNode){$/;"	m	class:TreeMenuUtils
 createMainMenu	tools/HtmlMenuBuilder.java	/^	public static String createMainMenu(TreeNode rootNode, String language) {$/;"	m	class:HtmlMenuBuilder
 createNewRootMenu	business/UserRequestManager.java	/^	public static TreeNode createNewRootMenu(HttpServletRequest request, HttpSession session) throws XMLFilesException {$/;"	m	class:UserRequestManager
-createOpenLayConfig	business/OpenLayersManager.java	/^	public String createOpenLayConfig(int[] idsBaseLayers, int[] extraLayers, String language) {$/;"	m	class:OpenLayersManager
+createOpenLayConfig	business/OpenLayersManager.java	/^	public String createOpenLayConfig(int[] idsBaseLayers, int[] extraLayers, UserConfig opConfig, String language) {$/;"	m	class:OpenLayersManager
 createOptionalLayersMenu	tools/HtmlMenuBuilder.java	/^	public static String createOptionalLayersMenu(TreeNode rootNode, String language, String basePath) {$/;"	m	class:HtmlMenuBuilder
 dateTimeToISO8601	tools/ConvertionTools.java	/^    public static String dateTimeToISO8601(DateTime dateTime)$/;"	m	class:ConvertionTools
 dispAnimation	business/servlets/NetCDFAnimationServlet.java	/^	protected void dispAnimation(HttpServletRequest request, HttpServletResponse response, PrintWriter out, Boolean kmlLink)$/;"	m	class:NetCDFAnimationServlet
@@ -141,8 +145,10 @@ getBackgroundLayers	business/LayerMenuManagerSingleton.java	/^	public ArrayList<
 getBackgroundLayers	business/OpenLayersManager.java	/^    public ArrayList<Layer> getBackgroundLayers() {$/;"	m	class:OpenLayersManager
 getBbox	model/Layer.java	/^	public BoundaryBox getBbox() {$/;"	m	class:Layer
 getCenter	conf/OpenLayerMapConfig.java	/^	public String getCenter() {$/;"	m	class:OpenLayerMapConfig
+getCenter	conf/UserConfig.java	/^    public String getCenter() {$/;"	m	class:UserConfig
 getCheckboxKmlLinks	business/UserRequestManager.java	/^	public static String[] getCheckboxKmlLinks(ArrayList<Layer> layers) {$/;"	m	class:UserRequestManager
 getChilds	model/menu/TreeNode.java	/^	public ArrayList<TreeNode> getChilds() {$/;"	m	class:TreeNode
+getClientOpConfig	business/UserRequestManager.java	/^	public static UserConfig getClientOpConfig(HttpSession session, OpenLayerMapConfig defaultOpConfig) {$/;"	m	class:UserRequestManager
 getCql	model/Layer.java	/^	public String getCql() {$/;"	m	class:Layer
 getCql_cols	model/Layer.java	/^	public String getCql_cols() {$/;"	m	class:Layer
 getDefVectorLayers	business/LayerMenuManagerSingleton.java	/^	public String[] getDefVectorLayers() throws XMLFilesException {$/;"	m	class:LayerMenuManagerSingleton
@@ -162,7 +168,8 @@ getInstance	business/AccessControls.java	/^    public static AccessControls getI
 getInstance	business/LayerMenuManagerSingleton.java	/^	public static synchronized LayerMenuManagerSingleton getInstance() throws XMLFilesException {$/;"	m	class:LayerMenuManagerSingleton
 getInstance	conf/OpenLayerMapConfig.java	/^	public static synchronized OpenLayerMapConfig getInstance() {$/;"	m	class:OpenLayerMapConfig
 getIp	model/Access.java	/^    public String getIp() {$/;"	m	class:Access
-getKmlLink	business/UserRequestManager.java	/^	public static String getKmlLink(OpenLayersManager opManager, int[] selectedBaseLayers, String selectedPalette) {$/;"	m	class:UserRequestManager
+getJSONObject	conf/UserConfig.java	/^    public String getJSONObject() {$/;"	m	class:UserConfig
+getKmlLink	business/UserRequestManager.java	/^	public static String getKmlLink(OpenLayersManager opManager, int[] selectedBaseLayers, UserConfig usrConf) {$/;"	m	class:UserRequestManager
 getKmlTxt	tools/HtmlMenuBuilder.java	/^	public static String getKmlTxt(int layerNum, String tabs) {$/;"	m	class:HtmlMenuBuilder
 getLanguage	tools/HtmlTools.java	/^	public static String getLanguage(String browserLanguage) {$/;"	m	class:HtmlTools
 getLayerByName	business/LayerMenuManagerSingleton.java	/^	public Layer getLayerByName(String name) {$/;"	m	class:LayerMenuManagerSingleton
@@ -175,7 +182,6 @@ getLayerTimeStepsForAnimation	business/NetCDFRequestManager.java	/^	public stati
 getLayername	model/menu/MenuEntry.java	/^	public String getLayername() {$/;"	m	class:MenuEntry
 getLayout	model/Layer.java	/^	public String getLayout() {$/;"	m	class:Layer
 getMainLayers	business/LayerMenuManagerSingleton.java	/^	public ArrayList<Layer> getMainLayers() {$/;"	m	class:LayerMenuManagerSingleton
-getMapProjection	conf/OpenLayerMapConfig.java	/^	public String getMapProjection() {$/;"	m	class:OpenLayerMapConfig
 getMaxColor	model/Layer.java	/^	public float getMaxColor() {$/;"	m	class:Layer
 getMaxLat	model/BoundaryBox.java	/^    public double getMaxLat () {$/;"	m	class:BoundaryBox
 getMaxLong	model/BoundaryBox.java	/^    public double getMaxLong () {$/;"	m	class:BoundaryBox
@@ -191,6 +197,7 @@ getNode	model/menu/TreeNode.java	/^	public MenuEntry getNode() {$/;"	m	class:Tre
 getNumLayers	model/OptMenuStruct.java	/^	public int getNumLayers() {$/;"	m	class:OptMenuStruct
 getNumUls	model/OptMenuStruct.java	/^	public int getNumUls() {$/;"	m	class:OptMenuStruct
 getOptionalCheckbox	tools/HtmlMenuBuilder.java	/^	public static String getOptionalCheckbox(int layerNum, String tabs, boolean selected, String currMenuStr) {$/;"	m	class:HtmlMenuBuilder
+getPalette	conf/UserConfig.java	/^    public String getPalette() {$/;"	m	class:UserConfig
 getPalette	model/Layer.java	/^	public String getPalette() {$/;"	m	class:Layer
 getPaletteUrl	business/NetCDFRequestManager.java	/^	public static String getPaletteUrl(Layer layer, String palette) {$/;"	m	class:NetCDFRequestManager
 getPlusTransButton	tools/HtmlMenuBuilder.java	/^	public static String getPlusTransButton(int layerNum, String tabs) {$/;"	m	class:HtmlMenuBuilder
@@ -225,7 +232,17 @@ getVectorLayers	business/LayerMenuManagerSingleton.java	/^	public ArrayList<Laye
 getVectorLayers	business/OpenLayersManager.java	/^    public ArrayList<Layer> getVectorLayers() {$/;"	m	class:OpenLayersManager
 getWidth	model/Layer.java	/^	public int getWidth() {$/;"	m	class:Layer
 getZoom	conf/OpenLayerMapConfig.java	/^	public String getZoom() {$/;"	m	class:OpenLayerMapConfig
-getmapBounds	conf/OpenLayerMapConfig.java	/^	public String getmapBounds() {$/;"	m	class:OpenLayerMapConfig
+getZoom	conf/UserConfig.java	/^    public String getZoom() {$/;"	m	class:UserConfig
+get_CalendarsAndStopContainer	conf/UserConfig.java	/^    public String get_CalendarsAndStopContainer() {$/;"	m	class:UserConfig
+get_calendarsMinimize	conf/UserConfig.java	/^    public String get_calendarsMinimize() {$/;"	m	class:UserConfig
+get_helpInstructions	conf/UserConfig.java	/^    public String get_helpInstructions() {$/;"	m	class:UserConfig
+get_mainMenuMinimize	conf/UserConfig.java	/^    public String get_mainMenuMinimize() {$/;"	m	class:UserConfig
+get_mainMenuParent	conf/UserConfig.java	/^    public String get_mainMenuParent() {$/;"	m	class:UserConfig
+get_optionalMenuParent	conf/UserConfig.java	/^    public String get_optionalMenuParent() {$/;"	m	class:UserConfig
+get_optionalsMinimize	conf/UserConfig.java	/^    public String get_optionalsMinimize() {$/;"	m	class:UserConfig
+get_palettePos	conf/UserConfig.java	/^    public String get_palettePos() {$/;"	m	class:UserConfig
+get_palettes_div	conf/UserConfig.java	/^    public String get_palettes_div() {$/;"	m	class:UserConfig
+getmapBounds	conf/OpenLayerMapConfig.java	/^        public String getmapBounds() {$/;"	m	class:OpenLayerMapConfig
 htmltxt	model/OptMenuStruct.java	/^	String htmltxt;$/;"	f	class:OptMenuStruct
 init	business/servlets/MapViewerServlet.java	/^	public void init() throws ServletException {$/;"	m	class:MapViewerServlet
 init	business/servlets/WCSServlet.java	/^	public void init() throws ServletException {$/;"	m	class:WCSServlet
@@ -272,7 +289,6 @@ processRequest	business/servlets/NetCDFAnimationServlet.java	/^	protected void p
 processRequest	business/servlets/RedirectServersServlet.java	/^	protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {$/;"	m	class:RedirectServersServlet
 processRequest	business/servlets/SimpleAjaxRedirectServlet.java	/^    protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {$/;"	m	class:SimpleAjaxRedirectServlet
 processRequest	business/servlets/WCSServlet.java	/^	protected void processRequest(HttpServletRequest request, HttpServletResponse response)$/;"	m	class:WCSServlet
-readProperty	conf/OpenLayerMapConfig.java	/^	public void readProperty(String key){$/;"	m	class:OpenLayerMapConfig
 recursiveBuilder	tools/HtmlMenuBuilder.java	/^	public static OptMenuStruct recursiveBuilder(TreeNode currentNode, String language, OptMenuStruct menuParamsCurrent, String currMenuStr) {$/;"	m	class:HtmlMenuBuilder
 refreshTree	business/LayerMenuManagerSingleton.java	/^	public boolean refreshTree() throws XMLFilesException {$/;"	m	class:LayerMenuManagerSingleton
 removeSpaceAndSpecialChars	tools/StringAndNumbers.java	/^	public static String removeSpaceAndSpecialChars(String original){$/;"	m	class:StringAndNumbers
@@ -280,6 +296,7 @@ setAccessDate	model/Access.java	/^    public void setAccessDate(Date accessDate)
 setAddDisplayName	model/Layer.java	/^	public void setAddDisplayName(String text, String language) {$/;"	m	class:Layer
 setBbox	model/Layer.java	/^	public void setBbox(BoundaryBox val) {$/;"	m	class:Layer
 setCenter	conf/OpenLayerMapConfig.java	/^	public void setCenter(String center) {$/;"	m	class:OpenLayerMapConfig
+setCenter	conf/UserConfig.java	/^    public void setCenter(String center) {$/;"	m	class:UserConfig
 setChilds	model/menu/TreeNode.java	/^	public void setChilds(ArrayList<TreeNode> childs) {$/;"	m	class:TreeNode
 setCql	model/Layer.java	/^	public void setCql(String cql) {$/;"	m	class:Layer
 setCql_cols	model/Layer.java	/^	public void setCql_cols(String cql_cols) {$/;"	m	class:Layer
@@ -298,7 +315,6 @@ setLayerDetails	model/Layer.java	/^	public void setLayerDetails(String layerDeta
 setLayername	model/menu/MenuEntry.java	/^	public void setLayername(String layername) {$/;"	m	class:MenuEntry
 setLayersFolder	business/LayerMenuManagerSingleton.java	/^	public static void setLayersFolder(String folder) throws XMLFilesException {$/;"	m	class:LayerMenuManagerSingleton
 setLayout	model/Layer.java	/^	public void setLayout(String layout) {$/;"	m	class:Layer
-setMapProjection	conf/OpenLayerMapConfig.java	/^	public void setMapProjection(String mapProj) {$/;"	m	class:OpenLayerMapConfig
 setMaxColor	model/Layer.java	/^	public void setMaxColor(float maxColor) {$/;"	m	class:Layer
 setMaxLat	model/BoundaryBox.java	/^    public void setMaxLat (double val) {$/;"	m	class:BoundaryBox
 setMaxLong	model/BoundaryBox.java	/^    public void setMaxLong (double val) {$/;"	m	class:BoundaryBox
@@ -313,10 +329,12 @@ setNetCDF	model/Layer.java	/^	public void setNetCDF(boolean netCDF) {$/;"	m	clas
 setNode	model/menu/TreeNode.java	/^	public void setNode(MenuEntry node) {$/;"	m	class:TreeNode
 setNumLayers	model/OptMenuStruct.java	/^	public void setNumLayers(int numLayers) {$/;"	m	class:OptMenuStruct
 setNumUls	model/OptMenuStruct.java	/^	public void setNumUls(int numUls) {$/;"	m	class:OptMenuStruct
+setPalette	conf/UserConfig.java	/^    public void setPalette(String palette) {$/;"	m	class:UserConfig
 setPalette	model/Layer.java	/^	public void setPalette(String palette) {$/;"	m	class:Layer
+setPositions	conf/UserConfig.java	/^    public void setPositions(String mainMenuParent, String palettes_div, String palettePos, String optionalMenuParent, String CalendarsAndStopContainer, String helpInstructions, String mainMenuMinimize, String calendarsMinimize, String optionalsMinimize) {$/;"	m	class:UserConfig
 setProjection	model/Layer.java	/^	public void setProjection(String val) {$/;"	m	class:Layer
 setRegion	model/Access.java	/^    public void setRegion(String region) {$/;"	m	class:Access
-setRestrictedExtent	conf/OpenLayerMapConfig.java	/^	public void setRestrictedExtent(String restrictedExtent) {$/;"	m	class:OpenLayerMapConfig
+setRestrictedExtent	conf/OpenLayerMapConfig.java	/^        public void setRestrictedExtent(String restrictedExtent) {$/;"	m	class:OpenLayerMapConfig
 setRoot	model/menu/TreeNode.java	/^	public void setRoot(boolean root) {$/;"	m	class:TreeNode
 setSelected	model/Layer.java	/^	public void setSelected(boolean selected) {$/;"	m	class:Layer
 setSelected	model/menu/TreeNode.java	/^	public void setSelected(boolean selected) {$/;"	m	class:TreeNode
@@ -332,7 +350,8 @@ setTituloCapasDatos	model/Layer.java	/^	public void setTituloCapasDatos(String[]
 setTransEffect	model/Layer.java	/^	public void setTransEffect(String transEffect) {$/;"	m	class:Layer
 setWidth	model/Layer.java	/^	public void setWidth(int width) {$/;"	m	class:Layer
 setZoom	conf/OpenLayerMapConfig.java	/^	public void setZoom(String zoom) {$/;"	m	class:OpenLayerMapConfig
-setmapBounds	conf/OpenLayerMapConfig.java	/^	public void setmapBounds(String mapBounds) {$/;"	m	class:OpenLayerMapConfig
+setZoom	conf/UserConfig.java	/^    public void setZoom(String zoom) {$/;"	m	class:UserConfig
+setmapBounds	conf/OpenLayerMapConfig.java	/^         public void setmapBounds(String mapBounds) {$/;"	m	class:OpenLayerMapConfig
 strArrayFromStringColon	tools/StringAndNumbers.java	/^    public static String[] strArrayFromStringColon(String stringColonSeparated){$/;"	m	class:StringAndNumbers
 strToDateTime	tools/ConvertionTools.java	/^	public static DateTime strToDateTime(String strDateTime){$/;"	m	class:ConvertionTools
 tabs	model/OptMenuStruct.java	/^	String tabs;$/;"	f	class:OptMenuStruct
@@ -343,12 +362,14 @@ translateName	tools/HtmlMenuBuilder.java	/^	public static String translateName(T
 traverseTree	model/menu/TreeMenuUtils.java	/^	public static void traverseTree(TreeNode rootNode) {$/;"	m	class:TreeMenuUtils
 unselectAllMenus	tools/HtmlTools.java	/^	public static TreeNode unselectAllMenus(TreeNode actualRoot) {$/;"	m	class:HtmlTools
 updateByString	model/BoundaryBox.java	/^    public void updateByString(String bboxStr){$/;"	m	class:BoundaryBox
+updateCenterAndZoom	business/UserRequestManager.java	/^	public static UserConfig updateCenterAndZoom(HttpServletRequest request, UserConfig opConfig) {$/;"	m	class:UserRequestManager
 updateDataSelected	business/UserRequestManager.java	/^	public static boolean updateDataSelected(HttpServletRequest request) {$/;"	m	class:UserRequestManager
 updateProperties	conf/OpenLayerMapConfig.java	/^	public void updateProperties(InputStream stream) {$/;"	m	class:OpenLayerMapConfig
-updateProperty	conf/OpenLayerMapConfig.java	/^	public void updateProperty(String key, String value){$/;"	m	class:OpenLayerMapConfig
+userConfig	business/servlets/MapViewerServlet.java	/^	UserConfig userConfig;$/;"	f	class:MapViewerServlet
 vecLinks	tools/HtmlMenuBuilder.java	/^	public static String[] vecLinks;$/;"	f	class:HtmlMenuBuilder
 vectorLayers	business/LayerMenuManagerSingleton.java	/^	ArrayList<Layer> vectorLayers;$/;"	f	class:LayerMenuManagerSingleton
 wcsManager	business/GeneraSolicitudesWCS.java	/^	public static String[][] wcsManager(int zoomLevel, Layer selectedLayer, String downloadFormat, String cqlfilter) {$/;"	m	class:GeneraSolicitudesWCS
+windowPosition	business/UserRequestManager.java	/^	public static UserConfig windowPosition(HttpServletRequest request, UserConfig opConfig) {$/;"	m	class:UserRequestManager
 xmlFileFilter	tools/xmlFileFilter.java	/^public class xmlFileFilter implements FileFilter{$/;"	c
 xmlFiles	business/LayerMenuManagerSingleton.java	/^	static String[] xmlFiles;$/;"	f	class:LayerMenuManagerSingleton
 xmlFolder	business/LayerMenuManagerSingleton.java	/^	static String xmlFolder;$/;"	f	class:LayerMenuManagerSingleton

@@ -11,11 +11,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
 	<script type="text/javascript"  >
-<<<<<<< HEAD
-		window.open ('https://viewer.coaps.fsu.edu/DeepCProject/mapviewer','_self',false)
-=======
 		window.open (location.href+'/mapviewer','_self',false)
->>>>>>> 164248b9b2dfb775e5f6f6bc514da0e170462cb1
 	</script>
     </head>
     <body>

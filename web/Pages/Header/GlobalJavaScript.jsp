@@ -10,11 +10,7 @@
 	var paletteUrl = '${paletteUrl}'; //palette server url
 	var basepath = '${basepath}'; //url base path ex:/DeepCProject
 	var lay_style = '${style}'; //layer color style, part of the url to request the pallete.
-<<<<<<< HEAD
-	var map; //map variable that contains the OpenLayers map
-=======
 	var map = 'empty map'; //map variable that contains the OpenLayers map
->>>>>>> 164248b9b2dfb775e5f6f6bc514da0e170462cb1
 	var ol3view;//View that contains the map
 
     // This variables are used by JavaScript to control de interface. 
@@ -28,7 +24,6 @@
 	var max_time_range = '${max_time_range}'; //calendar time range
 	var idx_main_layer = '${idx_main_layer}';// What is the index of the main layer (depending on the number of background layers)
 	var mapConfig = ${mapConfig}; //configurations such as resolution, size, zoom levels, etc...
-	var transectOn = false; //boolean for transect tool if the netcdf has the option or not
 	var currentZoom = 0; //This variable is used to avoid removing the 'Loading' text after zooming into the map (When an animation is been loading)
 	var cql_cols = '${cqlcols}'; // Set of columns that can be filtered by CQL
 	var cqlFilter = ${cqlfilter}; //Indicates if the base layer uses CQL filtering
@@ -54,8 +49,4 @@
 	var resolutionHigh = "<fmt:message key='ncwms.resolutionHigh'/>";
 	var resolutionMiddle = "<fmt:message key='ncwms.resolutionMiddle'/>";
 	var resolutionLow = "<fmt:message key='ncwms.resolutionLow'/>";
-<<<<<<< HEAD
-	
-=======
->>>>>>> 164248b9b2dfb775e5f6f6bc514da0e170462cb1
 </script>
