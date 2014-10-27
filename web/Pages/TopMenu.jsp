@@ -12,6 +12,13 @@
     </c:when>
     </c:choose>
     -->
+
+    <!-- Add shelters -->
+    <div class="buttonStyle toolTip" title="<fmt:message key='datafest.newshelter'/>"> 
+		<a class="maplink" href="AddShelter" style="text-align:center;" onclick="openAddShelter()">
+			<fmt:message key="datafest.newshelter" />
+		</a>
+    </div>
     <!-- Link to download kml files-->
     <div class="buttonStyle toolTip" id="kmlLinkParent" 
     title="<fmt:message key='help.tooltip.googleE'/>"> 
