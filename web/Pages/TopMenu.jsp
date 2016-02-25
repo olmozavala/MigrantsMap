@@ -15,7 +15,7 @@
 
     <!-- Add shelters -->
     <div class="buttonStyle toolTip" title="<fmt:message key='datafest.newshelter'/>"> 
-		<a class="maplink" href="AddShelter" style="text-align:center;" onclick="openAddShelter()">
+		<a class="maplink" href="./AddShelter" style="text-align:center;" ">
 			<fmt:message key="datafest.newshelter" />
 		</a>
     </div>

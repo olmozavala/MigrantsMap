@@ -90,7 +90,7 @@ function initOl3(){
 	var scaleLineControl = new ol.control.ScaleLine();
 	var fullScreen = new ol.control.FullScreen();
 	
-	ol3view = new ol.View2D({
+	ol3view = new ol.View({
 		projection: _map_projection,
 		center: defCenter,
 		zoom: mapConfig.zoom,

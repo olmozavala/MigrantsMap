@@ -28,7 +28,6 @@
 		<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 			
 		<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-		<link rel="icon" href="${basepath}/common/images/icon/PageIcon.ico" type="image/x-icon" />
 		<script>
 			var vector = null;
 			var style = new ol.style.Style({
@@ -44,7 +43,7 @@
 				var _map_projection = 'EPSG:3857';
 				var defCenter= ol.proj.transform([-100, 21], 'EPSG:4326', _map_projection);
 				
-				var ol3view = new ol.View2D({
+				var ol3view = new ol.View({
 					projection: _map_projection,
 					center: defCenter,
 					zoom: 5,
@@ -109,7 +108,8 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="#">Beat the Beast in the Steeplechase to the U.S.</a>
+					<a class="navbar-brand" href="./mapviewer">Beat the Beast in the Steeplechase to the U.S.</a>
+					<a class="navbar-brand" href="./mapviewer">Map viewer</a>
 				</div>
 			</div>
 		</div>

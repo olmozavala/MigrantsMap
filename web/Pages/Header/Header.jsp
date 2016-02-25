@@ -96,6 +96,7 @@
         <script src="${basepath}/common/JS/src/ajax/ajax.js"> </script>
 		<script src="${basepath}/common/JS/src/dynamicVector/VectorStyles.js"> </script>
 		<script src="${basepath}/common/JS/src/dynamicVector/DynamicVectorLayers.js"> </script>
+		<script src="${basepath}/common/JS/src/shelters/shelters.js"> </script>
 		<!--Debug mode-->
 
 <!-- Testing putpose .. to be removed later -->
